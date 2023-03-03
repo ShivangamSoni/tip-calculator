@@ -61,7 +61,7 @@ export default function App() {
 
     return (
         <div className="flex md:items-center justify-center min-h-screen bg-neutral-100 font-space">
-            <section className="grid gap-10 md:gap-20 w-full max-w-[920px]">
+            <main className="grid gap-10 md:gap-20 w-full max-w-[920px]">
                 <Header />
                 <div className="grid grid-col-1 md:grid-cols-2 px-7 py-9 md:p-9 gap-9 md:gap-5 rounded-t-3xl md:rounded-3xl bg-white shadow-2xl">
                     <Form onSubmit={(e) => e.preventDefault()}>
@@ -74,6 +74,7 @@ export default function App() {
                                     valueAsNumber: true,
                                     onChange: () => trigger(),
                                 })}
+                                label="Bill"
                                 type="number"
                                 IconBefore={Icons.DollarIcon}
                                 error={!!errors.bill || false}
@@ -136,6 +137,7 @@ export default function App() {
                                     onChange: () => trigger(),
                                 })}
                                 type="number"
+                                label="Number of People"
                                 IconBefore={Icons.PersonIcon}
                                 error={!!errors.bill || false}
                             />
@@ -161,7 +163,7 @@ export default function App() {
                         />
                     </Display>
                 </div>
-            </section>
+            </main>
         </div>
     );
 }
