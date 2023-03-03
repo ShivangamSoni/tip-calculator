@@ -1,5 +1,5 @@
-import { ReactComponent as DollarIcon } from "./icons/dollar.svg";
-import { ReactComponent as PersonIcon } from "./icons/person.svg";
+import { BiDollar as DollarIcon } from "react-icons/bi";
+import { BsFillPersonFill as PersonIcon } from "react-icons/bs";
 
 export const Icons = { DollarIcon, PersonIcon };
 
