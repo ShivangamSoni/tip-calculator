@@ -14,8 +14,8 @@ export default function Display({
     action?: ReactNode;
 }) {
     return (
-        <div className="grid grid-rows-[1fr_auto] p-10 bg-neutral-700 rounded-2xl">
-            <ul className="flex flex-col gap-5">{children}</ul>
+        <div className="grid md:grid-rows-[1fr_auto] gap-9 md:gap-0 p-6 md:p-10 bg-neutral-700 rounded-2xl">
+            <ul className="flex flex-col md:gap-5">{children}</ul>
             {action}
         </div>
     );
@@ -38,7 +38,7 @@ Display.Item = ({
                 </span>
                 <span className="text-sm text-neutral-200">{subtitle}</span>
             </div>
-            <div className="flex items-center text-primary text-5xl font-bold">
+            <div className="flex items-center text-primary text-3xl md:text-5xl font-bold">
                 <DollarIcon />
                 <span>{cost}</span>
             </div>

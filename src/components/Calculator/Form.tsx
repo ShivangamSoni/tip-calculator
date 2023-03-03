@@ -13,7 +13,7 @@ export default function Form({
     ...props
 }: DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement>) {
     return (
-        <form {...props} className="grid gap-10 p-4">
+        <form {...props} className="grid gap-10 md:p-4">
             {children}
         </form>
     );
@@ -29,7 +29,7 @@ Form.Field = ({
     children: ReactNode;
 }) => {
     return (
-        <fieldset className="grid gap-5">
+        <fieldset className="grid gap-4 md:gap-5">
             <div className="flex items-center justify-between text-sm font-semibold">
                 <legend className="text-neutral-300">{label}</legend>
                 {error && <span className="text-error">{error}</span>}

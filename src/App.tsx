@@ -60,10 +60,10 @@ export default function App() {
     totalPerPerson = isFinite(totalPerPerson) ? totalPerPerson : 0;
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-neutral-100 font-space">
-            <section className="grid gap-20 w-full max-w-[920px]">
+        <div className="flex md:items-center justify-center min-h-screen bg-neutral-100 font-space">
+            <section className="grid gap-10 md:gap-20 w-full max-w-[920px]">
                 <Header />
-                <div className="grid grid-cols-2 p-9 gap-5 rounded-3xl bg-white shadow-2xl">
+                <div className="grid grid-col-1 md:grid-cols-2 px-7 py-9 md:p-9 gap-9 md:gap-5 rounded-t-3xl md:rounded-3xl bg-white shadow-2xl">
                     <Form onSubmit={(e) => e.preventDefault()}>
                         <Form.Field
                             label="Bill"
@@ -84,7 +84,7 @@ export default function App() {
                             label="Select Tip %"
                             error={errors.tip?.message || ""}
                         >
-                            <div className="grid grid-cols-3 gap-4">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                                 {TIPS.map((val) => (
                                     <Form.RadioButton
                                         {...(register("tip"),
